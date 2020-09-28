@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <!-- <my-header :showBack="false"/>
+    <div class="wrap">
+      <div>
+        <my-tabs />
+        <top-rote :topRatedList="topRatedList"/>
+        <movie-list :movieList="movieList" :total="total"/>
+      </div>
+    </div> -->
+
+<!--  -->
+    <router-view></router-view>
+    <my-footer />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import MyFooter from "./components/public/footer";
+export default {
+  data() {
+    return {}
+  },
+  components: {
+    MyFooter
   }
+};
+</script>
+
+<style lang="scss" scoped>
+#app {
+  // padding-top: 50px;
+  // padding-bottom: 50px;
+  background: #f5f5f5;
 }
 </style>
